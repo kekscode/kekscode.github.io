@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>how to on Stefan Antoni</title>
+    <link>https://stefan.antoni.io/tags/how-to/</link>
+    <description>Recent content in how to on Stefan Antoni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Mon, 28 Mar 2016 21:30:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://stefan.antoni.io/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use Dropbox for static file delivery</title>
+      <link>https://stefan.antoni.io/post/using-dropbox-for-static-file-delivery/</link>
+      <pubDate>Mon, 28 Mar 2016 21:30:41 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/using-dropbox-for-static-file-delivery/</guid>
+      <description>Not a new idea i guess, but a convenient and cost-efficient way to separate binary content from my blogs text and metadata is to copy all the images and other static data to dropbox and link to it with a public sharing link and the ?dl=1-parameter as described in this article at the dropbox help center.
+The benefits are:
+ Workflow-friendly local file management, editing and syncing Always at least one local backup of all files on disk The structure of a shared link is consistent and easy to migrate if needed: https://www.</description>
+    </item>
+    
+  </channel>
+</rss>

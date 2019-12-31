@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de-de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Stefan Antoni  | Use Dropbox for static file delivery</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.62.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Use Dropbox for static file delivery" />
+<meta property="og:description" content="Not a new idea i guess, but a convenient and cost-efficient way to separate binary content from my blogs text and metadata is to copy all the images and other static data to dropbox and link to it with a public sharing link and the ?dl=1-parameter as described in this article at the dropbox help center.
+The benefits are:
+ Workflow-friendly local file management, editing and syncing Always at least one local backup of all files on disk The structure of a shared link is consistent and easy to migrate if needed: https://www." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://stefan.antoni.io/post/using-dropbox-for-static-file-delivery/" />
+<meta property="article:published_time" content="2016-03-28T21:30:41+00:00" />
+<meta property="article:modified_time" content="2016-03-28T21:30:41+00:00" />
+<meta itemprop="name" content="Use Dropbox for static file delivery">
+<meta itemprop="description" content="Not a new idea i guess, but a convenient and cost-efficient way to separate binary content from my blogs text and metadata is to copy all the images and other static data to dropbox and link to it with a public sharing link and the ?dl=1-parameter as described in this article at the dropbox help center.
+The benefits are:
+ Workflow-friendly local file management, editing and syncing Always at least one local backup of all files on disk The structure of a shared link is consistent and easy to migrate if needed: https://www.">
+<meta itemprop="datePublished" content="2016-03-28T21:30:41&#43;00:00" />
+<meta itemprop="dateModified" content="2016-03-28T21:30:41&#43;00:00" />
+<meta itemprop="wordCount" content="203">
+
+
+
+<meta itemprop="keywords" content="how to," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Use Dropbox for static file delivery"/>
+<meta name="twitter:description" content="Not a new idea i guess, but a convenient and cost-efficient way to separate binary content from my blogs text and metadata is to copy all the images and other static data to dropbox and link to it with a public sharing link and the ?dl=1-parameter as described in this article at the dropbox help center.
+The benefits are:
+ Workflow-friendly local file management, editing and syncing Always at least one local backup of all files on disk The structure of a shared link is consistent and easy to migrate if needed: https://www."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://stefan.antoni.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Stefan Antoni
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Use Dropbox for static file delivery</h1>
+      
+      <p class="tracked">
+         By <strong>Stefan Antoni</strong>
+      </p>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2016-03-28T21:30:41Z">March 28, 2016</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Not a new idea i guess, but a convenient and cost-efficient way to separate binary content from my blogs text and metadata is to copy all the images and other static data to dropbox and link to it with a public sharing link and the <code>?dl=1</code>-parameter as described in <a href="https://www.dropbox.com/en/help/201">this article</a> at the dropbox help center.</p>
+<p>The benefits are:</p>
+<ul>
+<li>Workflow-friendly local file management, editing and syncing</li>
+<li>Always at least one local backup of all files on disk</li>
+<li>The structure of a shared link is consistent and easy to migrate if needed: <code>https://www.dropbox.com/s/&lt;hash&gt;/file_name.ext?dl=1</code></li>
+</ul>
+<p>Important note: Dropbox is <em>not</em> a CDN and i'm pretty sure they have some throttling in place. A big bummer is that dropbox does not even set a caching header for client-side caching.</p>
+<hr>
+<p>For the sake of completeness: Of course you can put a CDN like Amazon AWS CloudFront in front of the Dropbox-delivered files. After that, you can convert your links from:</p>
+<p><code>https://www.dropbox.com/s/&lt;hash&gt;/file_name.ext?dl=1</code></p>
+<p>to</p>
+<p><code>https://&lt;id&gt;.cloudfront.net/s/&lt;hash&gt;/file_name.ext?dl=1</code></p>
+<p>or even use a CNAME entry in your DNS pointing to <code>&lt;id&gt;.cloudfront.net</code> which would result in:</p>
+<p><code>https://&lt;your-domain&gt;.tld/s/&lt;hash&gt;/file_name.ext?dl=1</code></p>
+<p>Nifty, right?</p>
+<p>It is important to keep the <code>?dl=1</code> all the way and configure your CDN to allow query parameter passing (usually they get stripped in the process).</p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/how-to" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">how to</a>
+   </li>
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://stefan.antoni.io/" >
+    &copy;  Stefan Antoni 2020 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

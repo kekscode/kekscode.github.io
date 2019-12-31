@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Stefan Antoni</title>
+    <link>https://stefan.antoni.io/post/</link>
+    <description>Recent content in Posts on Stefan Antoni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Thu, 04 Oct 2018 14:54:12 +0000</lastBuildDate>
+    
+	<atom:link href="https://stefan.antoni.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Parametric wristrest for your keyboard</title>
+      <link>https://stefan.antoni.io/post/parametric-wristrest-f/</link>
+      <pubDate>Thu, 04 Oct 2018 14:54:12 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/parametric-wristrest-f/</guid>
+      <description>I created a parametric wristrest using OpenSCAD and made it customizable for your personal needs. All details can be found on my thingiverse page for this project.</description>
+    </item>
+    
+    <item>
+      <title>Top 1 top tipp on Linux</title>
+      <link>https://stefan.antoni.io/post/top-1-top-tipp/</link>
+      <pubDate>Fri, 16 Feb 2018 18:21:29 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/top-1-top-tipp/</guid>
+      <description>My personal top #1 tip for using the ubiquitous command line utility top is to press i when you have launched it. It will help you to see much more than before by eliminating idle processes.
+Pressing i helps a lot, because most of the time you start top to monitor processes which are putting (a lot) of load on your system and not for watching idle processes doing nothing.</description>
+    </item>
+    
+    <item>
+      <title>3D printable smartphone or tablet stand</title>
+      <link>https://stefan.antoni.io/post/3d-printable-smartphone-or-tablet-stand/</link>
+      <pubDate>Sun, 02 Jul 2017 08:43:56 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/3d-printable-smartphone-or-tablet-stand/</guid>
+      <description>I always felt a bit disappointed with most 3D printable smartphone and tablet stands out there. Many have the wrong measures or are too big or too floppy, hence i decided to create my own. Being mostly a &amp;ldquo;consumer&amp;rdquo; of 3D designs, i had little to no experience in what i learned is called &amp;ldquo;solid modeling&amp;rdquo;. Still i am quite happy about the results, so i decided to share the model.</description>
+    </item>
+    
+    <item>
+      <title>Awesome lists</title>
+      <link>https://stefan.antoni.io/post/awesome-lists/</link>
+      <pubDate>Tue, 16 May 2017 23:27:22 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/awesome-lists/</guid>
+      <description>Do you know what an awesome-list is?
+I am not talking about a shopping list, the movie Schindler&#39;s List or a piece of code with an array consisting of the names from all pokémon.
+I am talking about a best practice for naming community-curated lists of valuable things on the internet. If this sounds like a bookmark list to you, you&#39;re right. It is the same as a well-kept bookmark list for a certain topics, but with more than only one contributor and usually a strict policy for contributions to ensure constant quality.</description>
+    </item>
+    
+    <item>
+      <title>Just had a nightmare</title>
+      <link>https://stefan.antoni.io/post/just-had-a-nightmare/</link>
+      <pubDate>Tue, 16 May 2017 09:20:08 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/just-had-a-nightmare/</guid>
+      <description>Last night i lost all my precious dotfiles and woke up in agony just to discover that they&#39;re still there and it all was just a bad dream.</description>
+    </item>
+    
+    <item>
+      <title>About debugging with python&#39;s pdb and friends</title>
+      <link>https://stefan.antoni.io/post/about-debugging-with-pythons-pdb-and-friends/</link>
+      <pubDate>Mon, 13 Mar 2017 23:16:09 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/about-debugging-with-pythons-pdb-and-friends/</guid>
+      <description>I prepared some slides and a bit of demo code to demonstrate the python debugger pdb and how to work with this tool.
+This is meant to be a hands-on session at my local python user group meetup in Frankfurt am Main at wednesday night.
+I just learned that debugging with the help of an interactive tool instead of investing the time to write unit tests or just trying to form a better mental model of the code at hand seem to be a controversial debate amongst developers nowadays.</description>
+    </item>
+    
+    <item>
+      <title>Battery case for FujiFilm NP-95 batteries</title>
+      <link>https://stefan.antoni.io/post/battery-case-for-fujifilm-np-95-batteries/</link>
+      <pubDate>Sat, 26 Nov 2016 17:13:55 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/battery-case-for-fujifilm-np-95-batteries/</guid>
+      <description>I love my X100T digital camera and i have been looking for a battery case to be a bit more organized. Turns out: There is none you can buy.
+I always wanted to design something useful which can be 3D-printed, so i made some designs and about a dozen test prints to get the dimensions right (not too tight, not to loose). I also made some stacked variants.
+Hopefully it is useful for some people, you can grab them at thingiverse.</description>
+    </item>
+    
+    <item>
+      <title>Compare two or more remote files via SSH in vimdiff</title>
+      <link>https://stefan.antoni.io/post/compare-to-remote-files-using-ssh/</link>
+      <pubDate>Wed, 07 Sep 2016 13:47:18 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/compare-to-remote-files-using-ssh/</guid>
+      <description>A nice way to compare two (or more) files on different servers with vimdiff - which is just an alias for vim -d file1 file2 filex - works like that:
+$&amp;gt; vimdiff scp://remotehost//path/to/file1 scp://remotehost//path/to/file2 scp://remotehost//path/to/file3  Of course you can also compare files on localhost:
+$&amp;gt; vimdiff ./file1 scp://remotehost//path/to/file2 scp://remotehost//path/to/file3  Actually vimdiff is also a great difftool in tandem with git and other (D)VCS when you like to use the command line a lot.</description>
+    </item>
+    
+    <item>
+      <title>How to do a todo list</title>
+      <link>https://stefan.antoni.io/post/how-to-do-a-todo-list/</link>
+      <pubDate>Sun, 31 Jul 2016 21:40:07 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/how-to-do-a-todo-list/</guid>
+      <description>I am not very good at making mental notes. Not only that i forget some things, but so many things suddenly come back to my mind yelling at me &amp;ldquo;you forgot to grab some milk on your way home&amp;rdquo; while having breakfast or &amp;ldquo;you promised to help me with my computer problems tonight&amp;rdquo; when i just went on a weekend trip an hour before.
+After a few years and reading books like David Allen&#39;s Getting things done i spent lots of time and some €€€ on productivity tools.</description>
+    </item>
+    
+    <item>
+      <title>3D printed safety razor</title>
+      <link>https://stefan.antoni.io/post/3d-printed-safety-razor/</link>
+      <pubDate>Sun, 12 Jun 2016 12:21:29 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/3d-printed-safety-razor/</guid>
+      <description>About this posting I&#39;m into safety razors and i&#39;m also enthusiastic about 3D printing. A few days ago i stumbled upon this model of a safety razor from a user called H3R0M4T3 and printed it using ordinary white PLA and not expecting too much.
+The result after my first shave: I like this homebrew razor very much. It gives a very close shave and the razor itself can be positioned in various ways along the plate before it is compressed by the top cap which gives you either the same blade configuration on both or a quite aggressive blade on one side and a more gently blade on the other side.</description>
+    </item>
+    
+    <item>
+      <title>About Frankfurt am Main</title>
+      <link>https://stefan.antoni.io/post/about-frankfurt-am-main/</link>
+      <pubDate>Thu, 21 Apr 2016 20:59:00 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/about-frankfurt-am-main/</guid>
+      <description>Today, I have been asked how i&#39;d describe my relationship with Frankfurt am Main. Frankfurt is not only the city i was born, it is the city where i still live. Actually, this was a challenging question, because i didn&#39;t want to answer &amp;ldquo;Frankfurt is an awesome city&amp;rdquo;, because this is just not true in my personal perception. On the other hand: I truly love this city.
+After a few minutes of thinking and texting (over messenger) i came up with this:</description>
+    </item>
+    
+    <item>
+      <title>Ad-hoc Webserver</title>
+      <link>https://stefan.antoni.io/post/ad-hoc-webserver/</link>
+      <pubDate>Sun, 10 Apr 2016 16:34:56 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/ad-hoc-webserver/</guid>
+      <description>Everybody who&#39;s using Python for some time knows about the SimpleHTTPServer module and its ability to act as an ad-hoc webserver:
+$&amp;gt; python2 -m SimpleHTTPServer 8080 Serving HTTP on 0.0.0.0 port 8080 ...  Since we are all moving onwards to Python 3, this is how to do it after SimpleHTTPServer has been merged into http.server in Python 3:
+$&amp;gt; python3 -m http.server 8080 Serving HTTP on 0.0.0.0 port 8080 .</description>
+    </item>
+    
+    <item>
+      <title>This blog&#39;s theme</title>
+      <link>https://stefan.antoni.io/post/theme/</link>
+      <pubDate>Thu, 31 Mar 2016 19:50:10 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/theme/</guid>
+      <description>I just want to write about the theme i am using. It is called Uno Zen by kikobeats and i enjoy the effort he put into the code, the repo and its documentation.
+Well done!</description>
+    </item>
+    
+    <item>
+      <title>Links</title>
+      <link>https://stefan.antoni.io/post/links/</link>
+      <pubDate>Tue, 29 Mar 2016 11:37:39 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/links/</guid>
+      <description>Various links to my other channels on the web.
+ Buzz  Twitter   Tech  Github   Art  flickr   Presentations  slides.com   Bizz  sitesitter.de quoscient.io XING linkedin    </description>
+    </item>
+    
+    <item>
+      <title>Use Dropbox for static file delivery</title>
+      <link>https://stefan.antoni.io/post/using-dropbox-for-static-file-delivery/</link>
+      <pubDate>Mon, 28 Mar 2016 21:30:41 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/using-dropbox-for-static-file-delivery/</guid>
+      <description>Not a new idea i guess, but a convenient and cost-efficient way to separate binary content from my blogs text and metadata is to copy all the images and other static data to dropbox and link to it with a public sharing link and the ?dl=1-parameter as described in this article at the dropbox help center.
+The benefits are:
+ Workflow-friendly local file management, editing and syncing Always at least one local backup of all files on disk The structure of a shared link is consistent and easy to migrate if needed: https://www.</description>
+    </item>
+    
+    <item>
+      <title>Revise &amp; Simplify (my blog)</title>
+      <link>https://stefan.antoni.io/post/alles-neu-in-2016/</link>
+      <pubDate>Fri, 25 Mar 2016 18:17:18 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/alles-neu-in-2016/</guid>
+      <description>I did a cleanup I threw away every other blog or static webpage i had and started new. This page - http://stefan.antoni.io - is the only personal webpage i maintain right now. Everything else has been shut down.
+I did also switch from german language to english.
+This means:
+ No headaches anymore because of a makeshift static site generator No fiddling with multi-page deployment workflows anymore Hopefully reaching a broader audience  I feel pretty excited right now.</description>
+    </item>
+    
+    <item>
+      <title>Legal information</title>
+      <link>https://stefan.antoni.io/post/legal-notice/</link>
+      <pubDate>Fri, 25 Mar 2016 14:36:46 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/legal-notice/</guid>
+      <description>Stefan Antoni Praunheimer Landstraße 210 60488 Frankfurt am Main Germany</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://stefan.antoni.io/post/about-stefan-antoni/</link>
+      <pubDate>Fri, 25 Mar 2016 14:36:33 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/about-stefan-antoni/</guid>
+      <description>My name is Stefan and i&#39;m an information technoloy loving tinkerer. I have developed a passion for the so-called Internet of Things and artificial intelligence in distributed systems.
+In a broader sense this means that i&#39;m interested in the ways networked technology can help us to improve life and society. On the contrary i&#39;m also considering the possible threats and socio-cultural implications of interconnected systems. The balance between what is possible today and desirable in the long term has to be carefully considered.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de-de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Stefan Antoni  | Ad-hoc monitoring Linux systems with on-board tools</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.62.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Ad-hoc monitoring Linux systems with on-board tools" />
+<meta property="og:description" content="Nowadays system administrators can chose from a plethora of monitoring tools of all kind. You can deploy a tried and trusted Open Source system based on Nagios, enjoy the &ldquo;all integrated&rdquo; systems like Zabbix or go with the time series based new kids like prometheus and the like to monitor your zoo of systems. If you want to monitor a single node, there are lightweight tools like monit, too.
+There is a sort of &ldquo;monitoring tasks&rdquo; which are not easily covered by all of these tools, because sometimes ordinary work is like:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://stefan.antoni.io/post/ad-hoc-monitoring-linux-systems/" />
+<meta property="article:published_time" content="2018-02-12T16:35:54+00:00" />
+<meta property="article:modified_time" content="2018-02-12T16:35:54+00:00" />
+<meta itemprop="name" content="Ad-hoc monitoring Linux systems with on-board tools">
+<meta itemprop="description" content="Nowadays system administrators can chose from a plethora of monitoring tools of all kind. You can deploy a tried and trusted Open Source system based on Nagios, enjoy the &ldquo;all integrated&rdquo; systems like Zabbix or go with the time series based new kids like prometheus and the like to monitor your zoo of systems. If you want to monitor a single node, there are lightweight tools like monit, too.
+There is a sort of &ldquo;monitoring tasks&rdquo; which are not easily covered by all of these tools, because sometimes ordinary work is like:">
+<meta itemprop="datePublished" content="2018-02-12T16:35:54&#43;00:00" />
+<meta itemprop="dateModified" content="2018-02-12T16:35:54&#43;00:00" />
+<meta itemprop="wordCount" content="462">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ad-hoc monitoring Linux systems with on-board tools"/>
+<meta name="twitter:description" content="Nowadays system administrators can chose from a plethora of monitoring tools of all kind. You can deploy a tried and trusted Open Source system based on Nagios, enjoy the &ldquo;all integrated&rdquo; systems like Zabbix or go with the time series based new kids like prometheus and the like to monitor your zoo of systems. If you want to monitor a single node, there are lightweight tools like monit, too.
+There is a sort of &ldquo;monitoring tasks&rdquo; which are not easily covered by all of these tools, because sometimes ordinary work is like:"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://stefan.antoni.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Stefan Antoni
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Ad-hoc monitoring Linux systems with on-board tools</h1>
+      
+      <p class="tracked">
+         By <strong>Stefan Antoni</strong>
+      </p>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2018-02-12T16:35:54Z">February 12, 2018</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Nowadays system administrators can chose from a plethora of monitoring tools of all kind. You can deploy a tried and trusted Open Source system based on Nagios, enjoy the &ldquo;all integrated&rdquo; systems like Zabbix or go with the time series based new kids like prometheus and the like to monitor your zoo of systems. If you want to monitor a single node, there are lightweight tools like <a href="https://mmonit.com/monit/">monit</a>, too.</p>
+<p>There is a sort of &ldquo;monitoring tasks&rdquo; which are not easily covered by all of these tools, because sometimes ordinary work is like:</p>
+<ol>
+<li>&ldquo;I think this process on this little testserver eats up a lot of disk space&rdquo;</li>
+<li>&ldquo;Hmm&hellip; we don't have monitoring for that (yet) and we have to investigate immediately&rdquo;</li>
+</ol>
+<p>Now it's time to get your hands dirty and be creative with the tools you already have. As always on systems which follow the UNIX philosophy, you can combine or chain tools and their output together. And you have a multiprocessing system with job control. So let's build some ad-hoc monitoring examples, based on some ubiquitous commands. Most of them have been here for ages. I'll concentrate on the following which should be all available on your favorite UNIX(-like) systems:</p>
+<ul>
+<li>Job control commands: <code>fg</code>, <code>bg</code>, <code>jobs</code>, <code>nohup</code></li>
+<li><code>df</code> and <code>du</code></li>
+<li><code>ps</code></li>
+<li><code>ls</code></li>
+<li><code>wc</code></li>
+<li><code>time</code>, <code>sleep</code> and <code>date</code></li>
+<li><code>find</code></li>
+<li><code>diff</code></li>
+<li><code>curl</code> (maybe the most modern one)</li>
+</ul>
+<p>Some words on why i chose the above:</p>
+<p>Basic job control is one of the most useful, yet overlooked feature of command line interaction. In a world were we connect to a server multiple times with several terminal emulator screens or use tools like screen or tmux to see multiple outputs at the same time, these tools are not available on a normal server and maybe they shouldn't. Actually they're not necessary as we will see.</p>
+<p>The commands <code>df</code> and <code>du</code> will be used for file system disk space usage and file space usage will be used to illustrate the very common &ldquo;my disk is out of space&rdquo; error and how we can monitor that ad-hoc. The <code>ps</code> command will let us monitor processes, <code>ls</code> gives us files, <code>wc</code> will sum things up, <code>time</code>, <code>sleep</code> and <code>date</code> will help us to create a continuous trail of observations with proper timestamps and intervals between them, <code>find</code> will help us find the needle in the haystack, <code>diff</code> will help us to compare things from probe to probe and <code>curl</code> will be used because i just like to debug things that speak HTTP and everybody knows what websites and webservers are.</p>
+<p>Examples:</p>
+<p><code>while true; do du -kh . &gt;/tmp/du_$(date &quot;+%F-%T-%Z&quot; | sed &quot;s/:/-/g&quot;).txt; sleep 10; done</code></p>
+<p>And then <code>diff -u</code> that result between to timestamps</p>
+<p><code>diff &lt;(curl -s google.de) &lt;(curl -s google.co.uk)</code></p>
+<p>watch -n10 -d &ldquo;du -h &amp;&amp; iostat&rdquo;</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://stefan.antoni.io/" >
+    &copy;  Stefan Antoni 2020 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

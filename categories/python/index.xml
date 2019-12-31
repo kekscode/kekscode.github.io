@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Stefan Antoni</title>
+    <link>https://stefan.antoni.io/categories/python/</link>
+    <description>Recent content in python on Stefan Antoni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Sun, 10 Apr 2016 16:34:56 +0000</lastBuildDate>
+    
+	<atom:link href="https://stefan.antoni.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ad-hoc Webserver</title>
+      <link>https://stefan.antoni.io/post/ad-hoc-webserver/</link>
+      <pubDate>Sun, 10 Apr 2016 16:34:56 +0000</pubDate>
+      
+      <guid>https://stefan.antoni.io/post/ad-hoc-webserver/</guid>
+      <description>Everybody who&#39;s using Python for some time knows about the SimpleHTTPServer module and its ability to act as an ad-hoc webserver:
+$&amp;gt; python2 -m SimpleHTTPServer 8080 Serving HTTP on 0.0.0.0 port 8080 ...  Since we are all moving onwards to Python 3, this is how to do it after SimpleHTTPServer has been merged into http.server in Python 3:
+$&amp;gt; python3 -m http.server 8080 Serving HTTP on 0.0.0.0 port 8080 .</description>
+    </item>
+    
+  </channel>
+</rss>
